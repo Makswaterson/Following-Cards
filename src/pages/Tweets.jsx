@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import SearchBox from '../components/SearchBox/SearchBox';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { getSearchMovies } from '../services/GetMovies';
+import { getSearchMovies } from '../services/GetCards';
 import { Loader } from 'components/Loader/Loader';
-import { List, Links } from './Movies.styled';
+import { List, Links } from './Tweets.styled';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);

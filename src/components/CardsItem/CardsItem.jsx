@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useRef } from 'react';
-import { Btn, ContainerList } from './MovieItem.styled';
+import { Btn, ContainerList } from './CardsItem.styled';
 
 const MovieInfo = ({
   movie: {

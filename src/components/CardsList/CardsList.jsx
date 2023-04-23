@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { List, Links } from './MovieList.styled';
+import { List, Links } from './CardsList.styled';
 
 export const MovieList = ({ movies }) => {
   return (

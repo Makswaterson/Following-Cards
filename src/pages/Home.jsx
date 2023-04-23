@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { getTrendingMovies } from '../services/GetMovies';
-import { MovieList } from '../components/MovieList/MovieList';
+import { getTrendingMovies } from '../services/GetCards';
+import { MovieList } from '../components/CardsList/CardsList';
 import { Loader } from 'components/Loader/Loader';
 
 function Home() {
