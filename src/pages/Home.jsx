@@ -1,33 +1,31 @@
 import { useState, useEffect } from 'react';
-import { getTrendingMovies } from '../services/GetCards';
-import { MovieList } from '../components/CardsList/CardsList';
+// import { homeTweet } from '../services/GetCards';
 import { Loader } from 'components/Loader/Loader';
 
 function Home() {
-  const [movies, setMovies] = useState([]);
+  const [card, setCard] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    const getPopularMovies = async () => {
-      try {
-        const { results } = await getTrendingMovies();
-        setMovies(results);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   setLoading(true);
+  //   const getStartCard = async () => {
+  //     try {
+  //       const { results } = await homeTweet(1);
+  //       setCard(results);
+  //     } catch (error) {
+  //       console.log(error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    getPopularMovies();
-  }, []);
+  //   getStartCard();
+  // }, []);
 
   return (
     <>
-      <h1>Trending Today:</h1>
+      <h1>The perfect cards for today:</h1>
       {loading && <Loader />}
-      <MovieList movies={movies} />
     </>
   );
 }

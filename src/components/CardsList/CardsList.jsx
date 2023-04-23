@@ -1,20 +1,14 @@
-import PropTypes from 'prop-types';
 import { List, Links } from './CardsList.styled';
+import CardInfo from '../CardsItem/CardsItem';
 
-export const MovieList = ({ movies }) => {
+export const CardList = ({ cards }) => {
   return (
     <List>
-      {movies.map(({ id, title, name }) => (
-        <li key={id}>
-          <Links to={`movies/${id}`}>
-            <p>{title || name}</p>
-          </Links>
+      {cards.map(card => (
+        <li key={card.id}>
+          <CardInfo card={card} />
         </li>
       ))}
     </List>
   );
-};
-
-MovieList.propTypes = {
-  movies: PropTypes.arrayOf(PropTypes.object),
 };
