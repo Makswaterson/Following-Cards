@@ -1,17 +1,29 @@
-import { Link, useLocation } from 'react-router-dom';
-import { useRef } from 'react';
-import { Btn, ContainerList } from './CardsItem.styled';
+// import { Link, useLocation } from 'react-router-dom';
+// import { useRef } from 'react';
+import {
+  Btn,
+  ContainerList,
+  Picture,
+  Rectangle,
+  Boy,
+  TextContainer,
+  CardText,
+  AvatarUser,
+} from './CardsItem.styled';
 
 const CardInfo = ({ card: { user, tweets, followers, avatar, id } }) => {
   return (
     <div>
       <ContainerList>
-        <img src={avatar} alt={user} width="300px"></img>
-
-        <section>
-          <span>{tweets} Tweets</span>
-          <p>{followers} Followers</p>
-        </section>
+        <Picture></Picture>
+        <Rectangle></Rectangle>
+        <Boy>
+          <AvatarUser src={avatar} alt={avatar} />
+        </Boy>
+        <TextContainer>
+          <CardText>{tweets} Tweets</CardText>
+          <CardText>{followers} Followers</CardText>
+        </TextContainer>
         <Btn type="button">Follow</Btn>
       </ContainerList>
     </div>

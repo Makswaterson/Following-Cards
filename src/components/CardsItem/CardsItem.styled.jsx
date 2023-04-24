@@ -1,22 +1,35 @@
 import styled from 'styled-components';
-import boy from '../../Images/Boy.png';
-import picture from '../../Images/picture2 1.png';
-import rectangle from '../../Images/Rectangle 1.png';
+import boy from '../../Images/boy.png';
+import picture from '../../Images/picture.png';
+import rectangle from '../../Images/rectangle.png';
 
 export const Btn = styled.button`
-  background-color: #3f51b5;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 5px;
-  outline: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 28px;
+  gap: 6px;
+  background: #ebd8ff;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
+  margin-top: 20px;
+  width: 196px;
+  height: 50px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
   text-transform: uppercase;
-  margin: 10px 0px;
+  color: #373737;
 
   cursor: pointer;
   box-shadow: 0px 2px 2px lightgray;
-  transition: ease background-color 250ms;
+  transition: ease background-color 250ms scale 1;
   &:hover {
-    background-color: orangered;
+    background-color: #ae84de;
+    scale: 1.1;
   }
 `;
 export const ContainerList = styled.div`
@@ -36,11 +49,84 @@ export const ContainerList = styled.div`
   );
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
-  display: 'block';
+
   gap: 50px;
-  border-bottom: 2px solid orangered;
-  /* @media (min-width: 600px) {
-    display: flex;
-    max-width: 1200;
-  } */
+`;
+export const Picture = styled.div`
+  width: 308px;
+  height: 168px;
+  background-image: url(${picture});
+`;
+export const Rectangle = styled.div`
+  width: 100%;
+  height: 8px;
+  background-image: url(${rectangle});
+`;
+export const Boy = styled.div`
+  position: absolute;
+  top: 190px;
+  left: 140px;
+  width: 83px;
+  height: 80px;
+  padding: 0px;
+  background-image: url(${boy});
+  padding: 7px 1px 2px 11px;
+  border-radius: 85.9232px;
+
+  overflow: hidden;
+`;
+export const TextContainer = styled.div`
+  display: flex;
+  margin-top: 25px;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const CardText = styled.section`
+  width: fit-content;
+  height: 24px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: #ebd8ff;
+`;
+export const followingBtn = styled.button`
+  display: flex;
+  margin-top: 25px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 28px;
+  gap: 6px;
+  width: 196px;
+  height: 50px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #373737;
+  background: #5cd3a8;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px lightgray;
+  transition: ease background-color 250ms scale 1;
+  &:hover {
+    background-color: #ae84de;
+    scale: 1.1;
+  }
+`;
+export const AvatarUser = styled.img`
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 60%;
 `;
