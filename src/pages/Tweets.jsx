@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useRef } from 'react';
 import { Loader } from 'components/Loader/Loader';
 import { getAllCards } from '../services/GetCards';
-import { List, Links } from './Tweets.styled';
+import { Links } from './Tweets.styled';
 import { Btn } from '../components/CardsItem/CardsItem.styled';
 import { CardList } from '../components/CardsList/CardsList';
 
@@ -24,7 +24,6 @@ const Cards = () => {
       try {
         const data = await getAllCards();
         setCards(data);
-        console.log(data);
       } catch (error) {
         setError(error);
       } finally {
@@ -38,9 +37,9 @@ const Cards = () => {
     <section>
       {loading && <Loader />}
       {error !== null && <p>Sorry,there is no cards</p>}
-      <Link to={backLinkLocationRef.current}>
+      <Links to={backLinkLocationRef.current}>
         <Btn type="button">Return back</Btn>
-      </Link>
+      </Links>
       <CardList cards={cards} />
       <Btn type="button">Load more</Btn>
     </section>

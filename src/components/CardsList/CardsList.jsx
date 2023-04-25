@@ -5,9 +5,9 @@ export const CardList = ({ cards }) => {
   return (
     <List>
       {cards.map(card => (
-        <li key={card.id}>
+        <Links key={card.id}>
           <CardInfo card={card} />
-        </li>
+        </Links>
       ))}
     </List>
   );

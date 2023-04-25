@@ -5,7 +5,6 @@ axios.defaults.baseURL = 'https://6445574ab80f57f581b7e6e9.mockapi.io';
 export async function getAllCards() {
   try {
     const { data } = await axios.get(`/tweets`);
-    console.log(data);
     return data;
   } catch (error) {
     console.log(error.message);

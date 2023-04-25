@@ -4,16 +4,10 @@ import picture from '../../Images/picture.png';
 import rectangle from '../../Images/rectangle.png';
 
 export const Btn = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  background: #ebd8ff;
+  margin-top: 25px;
   padding: 14px 28px;
   gap: 6px;
-  background: #ebd8ff;
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-  border-radius: 10.3108px;
-  margin-top: 20px;
   width: 196px;
   height: 50px;
   font-family: 'Montserrat';
@@ -23,13 +17,15 @@ export const Btn = styled.button`
   line-height: 22px;
   text-transform: uppercase;
   color: #373737;
-
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
   cursor: pointer;
   box-shadow: 0px 2px 2px lightgray;
   transition: ease background-color 250ms scale 1;
+  text-decoration: none;
   &:hover {
     background-color: #ae84de;
-    scale: 1.1;
+    transform: scale(1.1);
   }
 `;
 export const ContainerList = styled.div`
@@ -96,12 +92,8 @@ export const CardText = styled.section`
 
   color: #ebd8ff;
 `;
-export const followingBtn = styled.button`
-  display: flex;
+export const FollowingBtn = styled.button`
   margin-top: 25px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   padding: 14px 28px;
   gap: 6px;
   width: 196px;
@@ -112,6 +104,7 @@ export const followingBtn = styled.button`
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
+
   color: #373737;
   background: #5cd3a8;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);

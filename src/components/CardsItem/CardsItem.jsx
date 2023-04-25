@@ -1,7 +1,8 @@
-// import { Link, useLocation } from 'react-router-dom';
-// import { useRef } from 'react';
+import { useState } from 'react';
+import { updateTweet } from 'services/GetCards';
 import {
   Btn,
+  FollowingBtn,
   ContainerList,
   Picture,
   Rectangle,
@@ -11,7 +12,23 @@ import {
   AvatarUser,
 } from './CardsItem.styled';
 
-const CardInfo = ({ card: { user, tweets, followers, avatar, id } }) => {
+const CardInfo = ({
+  card: { user, tweets, followers, avatar, following, id },
+}) => {
+  const [active, setActive] = useState([following]);
+
+  let falseFollow = !active;
+
+  const activeToggleBtn = async () => {
+    if (falseFollow) {
+      followers += 1;
+    } else {
+      followers -= 1;
+    }
+    await updateTweet(id, falseFollow);
+    setActive(falseFollow);
+  };
+
   return (
     <div>
       <ContainerList>
@@ -24,7 +41,15 @@ const CardInfo = ({ card: { user, tweets, followers, avatar, id } }) => {
           <CardText>{tweets} Tweets</CardText>
           <CardText>{followers} Followers</CardText>
         </TextContainer>
-        <Btn type="button">Follow</Btn>
+        {active ? (
+          <Btn type="button" onClick={activeToggleBtn}>
+            Follow
+          </Btn>
+        ) : (
+          <FollowingBtn type="button" onClick={activeToggleBtn}>
+            Following
+          </FollowingBtn>
+        )}
       </ContainerList>
     </div>
   );

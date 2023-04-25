@@ -3,25 +3,18 @@ import { Link } from 'react-router-dom';
 
 export const List = styled.ul`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 0;
-  text-decoration: none;
+
   list-style: none;
 `;
 export const Links = styled(Link)`
-  font-size: 600;
-  text-decoration: none;
-  color: black;
+  margin-bottom: 50px;
 
   :hover {
-    color: orangered;
-    background: gray;
-    opacity: 0.7;
-  }
-  &.active {
-    color: orangered;
-    border: 1px solid red;
+    box-shadow: 42.5777px 46.87386px 40.6216px rgba(35, 5, 132, 0.23);
   }
 `;
