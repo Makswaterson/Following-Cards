@@ -1,20 +1,18 @@
 import { useState } from 'react';
 import { updateTweet } from 'services/GetCards';
+import { Boy } from './CardsItem.styled';
 import {
   Btn,
   FollowingBtn,
   ContainerList,
   Picture,
   Rectangle,
-  Boy,
   TextContainer,
   CardText,
   AvatarUser,
 } from './CardsItem.styled';
 
-const CardInfo = ({
-  card: { user, tweets, followers, avatar, following, id },
-}) => {
+const CardInfo = ({ card: { tweets, followers, avatar, following, id } }) => {
   const [active, setActive] = useState([following]);
 
   let falseFollow = !active;
