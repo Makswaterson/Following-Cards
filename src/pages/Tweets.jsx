@@ -36,6 +36,8 @@ const Cards = () => {
       }
     };
     allTweetsFetch();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setPage, page]);
 
   const onLoadMore = () => {
