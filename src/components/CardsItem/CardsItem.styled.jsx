@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import boy from 'images/boy.png';
+// import boy from 'images/boy.png';
 import picture from 'images/picture.png';
 import rectangle from 'images/rectangle.png';
 

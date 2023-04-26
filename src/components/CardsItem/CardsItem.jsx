@@ -50,7 +50,7 @@ const CardInfo = ({ card }) => {
         <Picture></Picture>
         <Rectangle></Rectangle>
         <Boy>
-          <AvatarUser src={card.avatar} alt={card.avatar} />
+          <AvatarUser src={card.avatar} alt="photos" />
         </Boy>
         <TextContainer>
           <CardText>{card.tweets} Tweets</CardText>
