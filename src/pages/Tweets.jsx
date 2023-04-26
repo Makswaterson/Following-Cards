@@ -7,6 +7,9 @@ import { Links } from './Tweets.styled';
 import { BtnFunc } from '../components/CardsItem/CardsItem.styled';
 import { CardList } from '../components/CardsList/CardsList';
 
+const per_page = 3;
+const totalUser = 15;
+
 const Cards = () => {
   const [cards, setCards] = useState([]);
   const location = useLocation();
