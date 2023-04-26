@@ -45,7 +45,7 @@ const Cards = () => {
   return (
     <section>
       {loading && <Loader />}
-      {error && <p>Sorry,there is no cards</p>}
+      {error && <p>Sorry,there is no cards...</p>}
       <Links to={backLinkLocationRef.current}>
         <BtnFunc type="button">Return back</BtnFunc>
       </Links>
