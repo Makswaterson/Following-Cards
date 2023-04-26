@@ -16,9 +16,6 @@ const Cards = () => {
   const backLinkLocationRef = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
-    // if (cards === null) {
-    //   return;
-    // }
     setLoading(true);
     const allTweetsFetch = async () => {
       try {
