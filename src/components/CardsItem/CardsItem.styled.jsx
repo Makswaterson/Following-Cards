@@ -48,28 +48,56 @@ export const ContainerList = styled.div`
 
   gap: 50px;
 `;
+// export const Picture = styled.div`
+//   width: 308px;
+//   height: 168px;
+//   background-image: url(${picture});
+// `;
+// export const Rectangle = styled.div`
+//   width: 100%;
+//   height: 8px;
+//   background-image: url(${rectangle});
+// `;
+// export const Boy = styled.div`
+//   position: absolute;
+//   top: 190px;
+//   left: 140px;
+//   width: 83px;
+//   height: 80px;
+//   padding: 0px;
+//   background-image: url(${boy});
+//   padding: 7px 1px 2px 11px;
+//   border-radius: 85.9232px;
+//   overflow: hidden;
+// `;
+
 export const Picture = styled.div`
+  /* position: relative; */
   width: 308px;
   height: 168px;
   background-image: url(${picture});
 `;
+
 export const Rectangle = styled.div`
   width: 100%;
   height: 8px;
+  margin-top: 18px;
   background-image: url(${rectangle});
 `;
+
 export const Boy = styled.div`
   position: absolute;
-  top: 190px;
-  left: 140px;
-  width: 83px;
+  top: 175px;
+  left: 150px;
+  width: 85.9232px;
   height: 80px;
   padding: 0px;
-  background-image: url(${boy});
-  padding: 7px 1px 2px 11px;
   border-radius: 85.9232px;
+  background-image: url(${boy});
+  padding: 9px 10px 10px 14px;
   overflow: hidden;
 `;
+
 export const TextContainer = styled.div`
   display: flex;
   margin-top: 25px;
