@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import boy from 'images/boy.png';
 import picture from 'images/picture.png';
 import rectangle from 'images/rectangle.png';
+import boy from 'images/boy.png';
 
 export const Btn = styled.button`
   background: #ebd8ff;
@@ -68,7 +68,6 @@ export const Boy = styled.div`
   background-image: url(${boy});
   padding: 7px 1px 2px 11px;
   border-radius: 85.9232px;
-
   overflow: hidden;
 `;
 export const TextContainer = styled.div`
