@@ -59,9 +59,6 @@ const Cards = () => {
           </BtnFunc>
         )
       )}
-      {/* <BtnFunc type="button" onClick={onLoadMore()}>
-        Load more
-      </BtnFunc> */}
     </section>
   );
 };
