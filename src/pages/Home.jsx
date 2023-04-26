@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Loader } from 'components/Loader/Loader';
 
 function Home() {
-  const [card, setCard] = useState([]);
+  // const [card, setCard] = useState([]);
   const [loading, setLoading] = useState(false);
 
   // useEffect(() => {

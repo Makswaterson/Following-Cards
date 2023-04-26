@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { updateTweet } from 'services/GetCards';
-import { Boy } from './CardsItem.styled';
 import {
   Btn,
   FollowingBtn,
   ContainerList,
   Picture,
   Rectangle,
+  Boy,
   TextContainer,
   CardText,
   AvatarUser,
