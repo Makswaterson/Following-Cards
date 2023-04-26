@@ -12,48 +12,49 @@ import {
   AvatarUser,
 } from './CardsItem.styled';
 
-const CardInfo = ({ card: { tweets, followers, avatar, following, id } }) => {
-  const [active, setActive] = useState(following);
-  const [followerNumber, setFollowerNumber] = useState(followers);
-  console.log(following);
+const CardInfo = ({ card }) => {
+  // const { tweets, followers, avatar, following, id } = card;
+  const [active, setActive] = useState(card.following);
+  // const [followerNumber, setFollowerNumber] = useState(followers);
+
   let falseFollow = !active;
+  const activeToggleBtn = async () => {
+    if (!active) {
+      card.followers += 1;
+    } else {
+      card.followers -= 1;
+    }
+    await updateTweet(card.id, falseFollow, card.followers).then(
+      setActive(!active)
+    );
+  };
 
   // const activeToggleBtn = async () => {
+  //   let falseFollow = !active;
   //   if (!active) {
-  //     followers += 1;
+  //     setFollowerNumber(followers);
+  //     await updateTweet(id, falseFollow, followers + 1);
+  //     // setActive(falseFollow);
   //   } else {
-  //     followers -= 1;
-  //     console.log(!active);
+  //     setFollowerNumber(followers);
+  //     await updateTweet(id, falseFollow, followers - 1);
+  //     // setActive(falseFollow);
   //   }
+  //   // console.log(!active);
   //   await updateTweet(id, falseFollow, followers);
   //   setActive(falseFollow);
   // };
-
-  const activeToggleBtn = async () => {
-    if (!active) {
-      setFollowerNumber(followers);
-      await updateTweet(id, falseFollow, followers + 1);
-      // setActive(falseFollow);
-    } else {
-      setFollowerNumber(followers);
-      await updateTweet(id, falseFollow, followers - 1);
-      // setActive(falseFollow);
-    }
-    console.log(!active);
-    await updateTweet(id, falseFollow, followers);
-    setActive(falseFollow);
-  };
   return (
     <div>
       <ContainerList>
         <Picture></Picture>
         <Rectangle></Rectangle>
         <Boy>
-          <AvatarUser src={avatar} alt={avatar} />
+          <AvatarUser src={card.avatar} alt={card.avatar} />
         </Boy>
         <TextContainer>
-          <CardText>{tweets} Tweets</CardText>
-          <CardText>{followerNumber} Followers</CardText>
+          <CardText>{card.tweets} Tweets</CardText>
+          <CardText>{card.followers} Followers</CardText>
         </TextContainer>
         {active ? (
           <Btn type="button" onClick={activeToggleBtn}>
