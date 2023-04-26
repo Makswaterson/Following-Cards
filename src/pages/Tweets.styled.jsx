@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export const Links = styled(Link)`
   font-size: 600;
   color: black;
+  text-decoration: none;
 
   :hover {
     color: orangered;

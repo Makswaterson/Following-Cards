@@ -13,20 +13,36 @@ import {
 } from './CardsItem.styled';
 
 const CardInfo = ({ card: { tweets, followers, avatar, following, id } }) => {
-  const [active, setActive] = useState([following]);
-
+  const [active, setActive] = useState(following);
+  const [followerNumber, setFollowerNumber] = useState(followers);
+  console.log(following);
   let falseFollow = !active;
 
+  // const activeToggleBtn = async () => {
+  //   if (!active) {
+  //     followers += 1;
+  //   } else {
+  //     followers -= 1;
+  //     console.log(!active);
+  //   }
+  //   await updateTweet(id, falseFollow, followers);
+  //   setActive(falseFollow);
+  // };
+
   const activeToggleBtn = async () => {
-    if (falseFollow) {
-      followers += 1;
+    if (!active) {
+      setFollowerNumber(followers);
+      await updateTweet(id, falseFollow, followers + 1);
+      // setActive(falseFollow);
     } else {
-      followers -= 1;
+      setFollowerNumber(followers);
+      await updateTweet(id, falseFollow, followers - 1);
+      // setActive(falseFollow);
     }
-    await updateTweet(id, falseFollow);
+    console.log(!active);
+    await updateTweet(id, falseFollow, followers);
     setActive(falseFollow);
   };
-
   return (
     <div>
       <ContainerList>
@@ -37,7 +53,7 @@ const CardInfo = ({ card: { tweets, followers, avatar, following, id } }) => {
         </Boy>
         <TextContainer>
           <CardText>{tweets} Tweets</CardText>
-          <CardText>{followers} Followers</CardText>
+          <CardText>{followerNumber} Followers</CardText>
         </TextContainer>
         {active ? (
           <Btn type="button" onClick={activeToggleBtn}>

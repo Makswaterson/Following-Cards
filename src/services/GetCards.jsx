@@ -19,21 +19,15 @@ export async function getPage(page) {
   }
 }
 
-export async function updateTweet(id, activeFollow) {
+export async function updateTweet(id, activeFollow, followers) {
   try {
-    const { data } = await axios.put(`/tweet/${id}`, {
+    const { data } = await axios.put(`/tweets/${id}`, {
       following: activeFollow,
+      followers,
     });
+    console.log(data);
     return data;
-  } catch (error) {
-    console.log(error.message);
+  } catch (e) {
+    console.log(e.message);
   }
 }
-// export async function homeTweet(id) {
-//   try {
-//     const { data } = await axios.get(`/tweet/${id}`);
-//     return data;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// }

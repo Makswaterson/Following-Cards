@@ -8,12 +8,11 @@ export const List = styled.ul`
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 0;
-
   list-style: none;
 `;
 export const Links = styled(Link)`
   margin-bottom: 50px;
-
+  text-decoration: none;
   :hover {
     box-shadow: 42.5777px 46.87386px 40.6216px rgba(35, 5, 132, 0.23);
   }
