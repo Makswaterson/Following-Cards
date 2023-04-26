@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import boy from 'Images/boy.png';
-import picture from 'Images/picture.png';
-import rectangle from 'Images/rectangle.png';
+import boy from 'images/boy.png';
+import picture from 'images/picture.png';
+import rectangle from 'images/rectangle.png';
 
 export const Btn = styled.button`
   background: #ebd8ff;
