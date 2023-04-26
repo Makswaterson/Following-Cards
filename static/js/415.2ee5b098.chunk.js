@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[415],{415:function(e,r,t){t.r(r);var a=t(184);r.default=function(){return(0,a.jsx)(a.Fragment,{children:(0,a.jsx)("h1",{children:"The perfect cards for today:"})})}}}]);
+//# sourceMappingURL=415.2ee5b098.chunk.js.map
