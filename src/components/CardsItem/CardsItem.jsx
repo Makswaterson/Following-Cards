@@ -13,13 +13,14 @@ import {
 } from './CardsItem.styled';
 
 const CardInfo = ({ card }) => {
-  // const { tweets, followers, avatar, following, id } = card;
   const [active, setActive] = useState(card.following);
-  // const [followerNumber, setFollowerNumber] = useState(followers);
+
+  const formatFollowers = (followers, tweets) =>
+    new Intl.NumberFormat('en-US').format(card.followers, card.tweets);
 
   let falseFollow = !active;
   const activeToggleBtn = async () => {
-    if (!active) {
+    if (active) {
       card.followers += 1;
     } else {
       card.followers -= 1;
@@ -29,21 +30,6 @@ const CardInfo = ({ card }) => {
     );
   };
 
-  // const activeToggleBtn = async () => {
-  //   let falseFollow = !active;
-  //   if (!active) {
-  //     setFollowerNumber(followers);
-  //     await updateTweet(id, falseFollow, followers + 1);
-  //     // setActive(falseFollow);
-  //   } else {
-  //     setFollowerNumber(followers);
-  //     await updateTweet(id, falseFollow, followers - 1);
-  //     // setActive(falseFollow);
-  //   }
-  //   // console.log(!active);
-  //   await updateTweet(id, falseFollow, followers);
-  //   setActive(falseFollow);
-  // };
   return (
     <div>
       <ContainerList>
@@ -53,8 +39,8 @@ const CardInfo = ({ card }) => {
           <AvatarUser src={card.avatar} alt="photos" />
         </Boy>
         <TextContainer>
-          <CardText>{card.tweets} Tweets</CardText>
-          <CardText>{card.followers} Followers</CardText>
+          <CardText>{formatFollowers()} Tweets</CardText>
+          <CardText>{formatFollowers()} Followers</CardText>
         </TextContainer>
         {active ? (
           <Btn type="button" onClick={activeToggleBtn}>

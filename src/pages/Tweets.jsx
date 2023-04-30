@@ -17,6 +17,8 @@ const Cards = () => {
 
   const backLinkLocationRef = useRef(location.state?.from ?? '/');
 
+  // const fetchAllTweets = ()=>{}
+
   useEffect(() => {
     setLoading(true);
     const allTweetsFetch = async () => {
